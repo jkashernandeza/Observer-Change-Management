@@ -16,19 +16,20 @@ public class Regar implements Observer {
 
     public Regar(Observable obs) {
         obs.addObserver(this);
+        System.out.println("jala...");
     }
     
 
     @Override
     public void update(Observable obs, Object o1) {
         if (obs instanceof Mediator) {
-           Mediator mediador = (Mediator)obs;
+            Mediator mediador = (Mediator)obs;
             riega();
         }
     }
     
     public void riega(){
-        //Manda comando a un pic o parecido para activar el riego
+        //Manda comando a un pic o algo parecido para activar el riego
         System.out.println("La planta se regó... :p");
     }
     
